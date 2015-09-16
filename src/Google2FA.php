@@ -90,7 +90,7 @@ class Google2FA implements Google2FAContract
 	 */
 	public function generateSecretKey($length = 16, $prefix = '')
 	{
-		$b32 = "234567QWERTYUIOPASDFGHJKLZXCVBNM";
+		$b32 = static::VALID_FOR_B32;
 
 		$secret = $prefix ? $this->toBase32($prefix) : '';
 
